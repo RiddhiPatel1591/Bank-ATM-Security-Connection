@@ -3,7 +3,7 @@
 ### In this project, you will implement an iterative secure banking system consisting of a bank server and multiple clients (i.e., the ATMs). Each bank user can use the ATM to transfer money to other users and view their account balance. The bank server manages a file “password” that stores user IDs and associated passwords, as shown below. In this project, you can create the file “password” manually.
 
 #### chris 1234
-#### fey 5678
+### fey 5678
 #### joe 9012
 
 ### The bank server also manages a file “balance” that keeps track of the savings and checking account balances for each user. The file “balance” has the following format:
