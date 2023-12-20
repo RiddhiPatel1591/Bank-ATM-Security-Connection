@@ -1,31 +1,29 @@
 # Bank-ATM Connection 
 
-### In this project, you will implement an iterative secure banking system consisting of a bank server and 
-multiple clients (i.e., the ATMs). Each bank user can use the ATM to transfer money to other users and 
-view their account balance. The bank server manages a file “password” that stores user IDs and associated 
-passwords, as shown below. In this project, you can create the file “password” manually.
+### In this project, you will implement an iterative secure banking system consisting of a bank server and multiple clients (i.e., the ATMs). Each bank user can use the ATM to transfer money to other users and view their account balance. The bank server manages a file “password” that stores user IDs and associated passwords, as shown below. In this project, you can create the file “password” manually.
 
 chris 1234
 fey 5678
 joe 9012
-The bank server also manages a file “balance” that keeps track of the savings and checking account 
-balances for each user. The file “balance” has the following format:
- <user-id> <saving-balance> <checking-balance>
-Here, <user-id> is the ID of the user. <saving-balance> and <checking-balance> represent the balances in 
-the user’s savings and checking accounts, respectively.
-Initially, the file “balance” contains the following data, indicating $10,000 in the savings account and 
-$1,000 in the checking account for each user.
+
+### The bank server also manages a file “balance” that keeps track of the savings and checking account balances for each user. The file “balance” has the following format:
+
+<user-id> <saving-balance> <checking-balance>
+
+### Here, <user-id> is the ID of the user. <saving-balance> and <checking-balance> represent the balances in the user’s savings and checking accounts, respectively. Initially, the file “balance” contains the following data, indicating $10,000 in the savings account and $1,000 in the checking account for each user.
+
 chris 10000 1000
 fey 10000 1000
 joe 10000 1000
-Both public-key encryption and symmetric-key encryption methods are used for security. Let Kpub and 
-Kprb denote the public and private key of the bank server, respectively. Assume that all clients (i.e., ATMs)
-have the bank’s public key. The public and private keys can be manually generated and stored on the disk. 
-The client is invoked as:
-atm <Bank server’s domain name> <Bank server’s port number> 
-The bank server is invoked as:
-bank <Bank server’s port number>
-The detailed steps are given below:
+
+### Both public-key encryption and symmetric-key encryption methods are used for security. Let Kpub and Kprb denote the public and private key of the bank server, respectively. Assume that all clients (i.e., ATMs) have the bank’s public key. The public and private keys can be manually generated and stored on the disk. 
+
+## The client is invoked as:
+### atm <Bank server’s domain name> <Bank server’s port number> 
+## The bank server is invoked as:
+### bank <Bank server’s port number>
+
+### The detailed steps are given below:
 S1: The ATM establishes a connection with the bank server.
 S2: The ATM prompts the user to enter their ID and password.
 S3: The ATM generates a symmetric key K, sends E(Kpub, K) and E(K, ID||password) to the bank server, 
