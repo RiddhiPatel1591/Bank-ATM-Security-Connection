@@ -1,4 +1,4 @@
-#Bank-ATM Connection 
+# Bank-ATM Connection 
 
 ###In this project, you will implement an iterative secure banking system consisting of a bank server and 
 multiple clients (i.e., the ATMs). Each bank user can use the ATM to transfer money to other users and 
